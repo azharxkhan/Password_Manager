@@ -9,7 +9,7 @@ public class PasswordGenerator {
     public String generatePassword() {
         StringBuilder password = new StringBuilder();
 
-        for (int i = 0; i < 3; i++) { // Generate 3 groups of 5 characters
+        for (int i = 0; i < 3; i++) { 
             for (int j = 0; j < 5; j++) {
                 char character = CHARACTERS.charAt(random.nextInt(CHARACTERS.length()));
                 if (random.nextBoolean()) {
@@ -18,7 +18,7 @@ public class PasswordGenerator {
                 password.append(character);
             }
             if (i < 2) {
-                password.append("-"); // Append hyphen between groups
+                password.append("-"); 
             }
         }
         return password.toString();
