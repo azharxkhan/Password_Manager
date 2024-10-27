@@ -2,10 +2,23 @@ package passwords.com.Generator;
 
 import java.security.SecureRandom;
 
+/**
+ * PasswordGenerator is responsible for generating secure passwords.
+ * The generated passwords consist of random alphanumeric characters, 
+ * with a mix of uppercase and lowercase letters, and are formatted with 
+ * hyphens for readability.
+ */
 public class PasswordGenerator {
     private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyz0123456789";
     private static final SecureRandom random = new SecureRandom();
 
+    /**
+     * Generates a secure, random password. The password consists of three 
+     * groups of five alphanumeric characters, each group separated by a hyphen.
+     * Characters are randomly chosen and may be upper or lowercase.
+     *
+     * @return A randomly generated password string.
+     */
     public String generatePassword() {
         StringBuilder password = new StringBuilder();
 
